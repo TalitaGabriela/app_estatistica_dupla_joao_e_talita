@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Registro de Frequência</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Adiciona bibliotecas necessárias -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-box-and-violin"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Registro de Frequência por Turma</h1>
+        </header>
+        
+        <main>
+            <section class="upload">
+                <label for="uploadArquivo" class="upload-label">Carregue o arquivo de frequência (Excel)</label>
+                <input type="file" id="uploadArquivo" accept=".xlsx, .xls" />
+            </section>
+
+            <section class="resultados">
+                <h2>Resultados Estatísticos</h2>
+                <p id="media">Média: </p>
+                <p id="mediana">Mediana: </p>
+                <p id="desvioPadrao">Desvio Padrão: </p>
+            </section>
+
+            <section class="grafico">
+                <h2>Gráfico de Dispersão (Boxplot)</h2>
+                <canvas id="boxplot"></canvas>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 - App para Registro de Frequência por Turma</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
