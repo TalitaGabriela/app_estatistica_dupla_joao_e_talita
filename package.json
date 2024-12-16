@@ -1,0 +1,18 @@
+{
+  "name": "app_estatistica_dupla_joao_e_talita",
+  "version": "1.0.0",
+  "description": "Objetivo: Criar uma aplicação que utilize pelo menos 3 conceitos aprendidos na matéria de Estatística.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^4.4.7",
+    "chartjs-chart-box-and-violin-plot": "^4.0.0",
+    "xlsx": "^0.18.5"
+  }
+}

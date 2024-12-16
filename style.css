@@ -66,6 +66,11 @@ header h1 {
     text-align: center;
 }
 
+.grafico canvas {
+    width: 100%; 
+    height: 1000px;
+}
+
 footer {
     text-align: center;
     margin-top: 20px;

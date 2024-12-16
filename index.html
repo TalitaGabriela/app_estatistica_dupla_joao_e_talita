@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Adiciona bibliotecas necessárias -->
     <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-box-and-violin"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-box-and-violin-plot"></script>
 </head>
 <body>
     <div class="container">
@@ -24,9 +24,9 @@
 
             <section class="resultados">
                 <h2>Resultados Estatísticos</h2>
-                <p id="media">Média: </p>
-                <p id="mediana">Mediana: </p>
-                <p id="desvioPadrao">Desvio Padrão: </p>
+                <p id="media">Média de presença dos alunos: </p>
+                <p id="mediana">Mediana (nível de frequência mais comum): </p>
+                <p id="desvioPadrao">Desvio Padrão (mede a consistência nas presenças): </p>
             </section>
 
             <section class="grafico">
@@ -40,6 +40,6 @@
         </footer>
     </div>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
