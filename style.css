@@ -1,79 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+/* NAVBAR */
+/* Resetando algumas propriedades padrão */
+.navbar {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
+.navbar .logo a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
 }
 
-header h1 {
-    font-size: 24px;
-    color: #0056b3;
+.nav-links {
+  list-style-type: none;
+  display: flex;
 }
 
-.upload {
-    margin-bottom: 20px;
-    text-align: center;
+.nav-links li {
+  margin: 0 15px;
 }
 
-.upload-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-#uploadArquivo {
+.nav-links a:hover {
+  color: #4caf50;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  background-color: #fff;
+  height: 4px;
+  width: 25px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #333;
+    width: 200px;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
 }
 
-.resultados {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+h1 {
+  color: #333;
 }
 
-.resultados h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+p {
+  color: #666;
 }
 
-.resultados p {
-    font-size: 16px;
-    margin: 5px 0;
+input[type="file"] {
+  margin: 20px auto;
 }
 
-.grafico {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+canvas {
+  margin: 20px auto;
+  background-color: #fff;
+}
+
+#resultadoEstatistico {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #444;
+}
+
+/* Conteudo Home */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.hero .hero-image {
+  max-width: 25%;
+  border-radius: 10px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 250px;
+}
+
+.service {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 40%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.service h3 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.service p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #777;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
     text-align: center;
-}
+  }
 
-.grafico canvas {
-    width: 100%; 
-    height: 1000px;
-}
+  .hero-content {
+    max-width: 100%;
+  }
 
-footer {
-    text-align: center;
+  .hero .hero-image {
+    max-width: 80%;
     margin-top: 20px;
-    font-size: 14px;
-    color: #777;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Grafico */
+.graficoH1{
+    text-align: center;
+}
+
+.graficoP{
+    text-align: center;
 }

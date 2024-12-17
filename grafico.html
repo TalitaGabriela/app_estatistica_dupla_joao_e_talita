@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequência dos Alunos - Gráfico de Radar</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Importando bibliotecas -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/">Dados Estudantis</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="grafico.html">Gráfico</a></li>
+        <li><a href="estatisticas.html">Estatísticas</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+    
+    <h1 class="graficoH1">Frequência dos Alunos por Turma</h1>
+    <p class="graficoP">
+      Carregue um arquivo Excel com as colunas:
+      <strong>Turma (Fundamental)</strong> e <strong>Frequência (%)</strong>
+    </p>
+
+    <canvas id="radarChart" width="400" height="400"></canvas>
+    <div id="resultadoEstatistico"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
