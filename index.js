@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function fetchDataFromExcel() {
   // Carrega o arquivo Excel localizado na pasta 'data'
   fetch("data/dados.xlsx")
-    .then((response) => response.arrayBuffer()) // Converte o arquivo para ArrayBuffer
+    .then((response) => response.arrayBuffer()) 
     .then((data) => {
       const workbook = XLSX.read(data, { type: "array" });
 
@@ -111,9 +111,9 @@ function exibirEstatisticas(media, mediana, desvioPadrao) {
     desvioPadrao !== undefined
   ) {
     document.getElementById("resultadoEstatistico").innerHTML = `
-            <p class="graficoP"><strong>Média de Frequência:</strong> ${media.toFixed(2)}%</p>
-            <p class="graficoP"><strong>Mediana:</strong> ${mediana.toFixed(2)}%</p>
-            <p class="graficoP"><strong>Desvio Padrão:</strong> ${desvioPadrao.toFixed(2)}%</p>
+            <p class="graficoP"><strong>Média de Frequência:</strong> ${media.toFixed(2)}</p>
+            <p class="graficoP"><strong>Mediana:</strong> ${mediana.toFixed(2)}</p>
+            <p class="graficoP"><strong>Desvio Padrão:</strong> ${desvioPadrao.toFixed(2)}</p>
         `;
   } else {
     document.getElementById("resultadoEstatistico").innerHTML =

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Análise de Frequência dos Alunos</title>
+    <style>
+      /* Estilização básica */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 900px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #2a7abe;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .section {
+        margin-top: 20px;
+      }
+      .section p {
+        margin: 10px 0;
+      }
+      .highlight {
+        font-weight: bold;
+        color: #2a7abe;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/">Dados Estudantis</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="grafico.html">Gráfico</a></li>
+        <li><a href="estatisticas.html">Estatísticas</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section class="section">
+        <h2>Média de Frequência</h2>
+        <p>
+          Com <span class="highlight" id="media">83.04%</span>, significa que,
+          em média, os alunos têm uma boa presença nas aulas. Esse valor
+          positivo indica que, na maior parte das turmas, a frequência está
+          alta. Isso indica o desempenho geral da turma.
+          <br />
+          <strong>Importância:</strong> A média é útil para ter uma visão geral,
+          mas pode ser influenciada por valores extremos.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Mediana de Frequência</h2>
+        <p>
+          A mediana é o valor central que separa os dados ao meio. Como a
+          mediana é <span class="highlight" id="mediana">84.00%</span>, isso
+          mostra que pelo menos metade das turmas possuem uma frequência acima
+          desse valor, o que é consistente com a média.
+          <br />
+          <strong>Importância:</strong> A mediana é mais estável, pois não é
+          afetada por valores muito baixos ou muito altos.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Desvio Padrão</h2>
+        <p>
+          O desvio padrão mede a dispersão dos valores em torno da média. Como o
+          desvio padrão é de
+          <span class="highlight" id="desvio">7.68%</span>, a frequência dos
+          alunos não varia muito entre as turmas. Isso indica que os valores são
+          relativamente consistentes.
+          <br />
+          <strong>Importância:</strong> Um desvio padrão baixo mostra que a
+          assiduidade é estável entre os alunos.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Conclusão</h2>
+        <p>
+          <strong>Os dados são positivos:</strong> tanto a média quanto a mediana estão próximas
+          de 84%, o que reflete uma alta frequência geral. O baixo desvio padrão
+          (7,68%) sugere pouca variação, indicando que a maioria das turmas
+          mantém frequências semelhantes.
+        </p>
+      </section>
+    </div>
+
+    <script>
+      // Dados fictícios carregados automaticamente
+      const dadosFrequencia = {
+        media: 83.04,
+        mediana: 84.0,
+        desvioPadrao: 7.68,
+      };
+
+      // Exibição dinâmica no HTML
+      document.getElementById("media").textContent =
+        dadosFrequencia.media + "%";
+      document.getElementById("mediana").textContent =
+        dadosFrequencia.mediana + "%";
+      document.getElementById("desvio").textContent =
+        dadosFrequencia.desvioPadrao + "%";
+    </script>
+  </body>
+</html>
